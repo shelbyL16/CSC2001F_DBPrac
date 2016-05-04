@@ -1,4 +1,4 @@
-PASSWORD = U00eh2810l
+PASSWORD =kahaonie 
 USER = lbsshe003
 HOST = nightmare.cs.uct.ac.za
 SRC = src
@@ -14,13 +14,34 @@ tables:
 
 insert:
 	@echo 'Running question 1 query - inserting.'
+	$(MYSQL) $(FLAGS) $(DATABASE) < $(SRC)/insert-q2.sql
 
 query:
 	@echo 'Running question 3 query.'
 	$(MYSQL) $(FLAGS) $(DATABASE) < $(SRC)/query-q3.sql
+	@echo
+	@echo 'Running question 4 query.'
+	$(MYSQL) $(FLAGS) $(DATABASE) < $(SRC)/query-q4.sql
+	@echo
+	@echo 'Running question 5 query.'
+	$(MYSQL) $(FLAGS) $(DATABASE) < $(SRC)/query-q5.sql
+	@echo
+	@echo 'Running question 6 query.'
+	$(MYSQL) $(FLAGS) $(DATABASE) < $(SRC)/query-q6.sql
+	@echo
+	@echo 'Running question 7 query.'
+	$(MYSQL) $(FLAGS) $(DATABASE) < $(SRC)/query-q7.sql
+	@echo
+	@echo 'Running question 8 query.'
+	$(MYSQL) $(FLAGS) $(DATABASE) < $(SRC)/query-q8.sql
+	@echo
+	@echo 'Running question 9 query.'
+	$(MYSQL) $(FLAGS) $(DATABASE) < $(SRC)/query-q9.sql
+	@echo 'Querying done.'
+	@echo
 
 clean:
 	@echo 'Erasing database $(DATABASE).'
 	@$(MYSQL) $(FLAGS) -e 'DROP DATABASE $(DATABASE);'
-	@echo Creating database $(DATABASE).'
+	@echo 'Creating database $(DATABASE).'
 	@$(MYSQL) $(FLAGS) -e 'CREATE DATABASE $(DATABASE);'

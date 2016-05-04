@@ -1,0 +1,3 @@
+SELECT SUM(Amount_Paid), Department
+FROM Student
+GROUP BY Department;
