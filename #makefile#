@@ -1,4 +1,4 @@
-PASSWORD =kahaonie
+PASSWORD =kahaonie 
 USER = lbsshe003
 HOST = nightmare.cs.uct.ac.za
 SRC = src
@@ -15,14 +15,6 @@ tables:
 insert:
 	@echo 'Running question 1 query - inserting.'
 	$(MYSQL) $(FLAGS) $(DATABASE) < $(SRC)/insert-q2.sql
-	@echo
-	$(MYSQL) $(FLAGS) $(DATABASE) < $(SRC)/show1.sql
-	@echo
-	$(MYSQL) $(FLAGS) $(DATABASE) < $(SRC)/show2.sql
-	@echo
-	$(MYSQL) $(FLAGS) $(DATABASE) < $(SRC)/show3.sql
-	@echo
-
 
 
 query:
