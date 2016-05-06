@@ -17,6 +17,11 @@ insert:
 	$(MYSQL) $(FLAGS) $(DATABASE) < $(SRC)/insert-q2.sql
 
 query:
+	@echo
+	@echo 'Generating the queries given.'
+	@echo '________________________________________________________________'
+	@echo
+	@echo
 	@echo 'Running question 3 query.'
 	$(MYSQL) $(FLAGS) $(DATABASE) < $(SRC)/query-q3.sql
 	@echo
@@ -37,6 +42,8 @@ query:
 	@echo
 	@echo 'Running question 9 query.'
 	$(MYSQL) $(FLAGS) $(DATABASE) < $(SRC)/query-q9.sql
+	@echo
+	@echo '________________________________________________________________'
 	@echo 'Querying done.'
 	@echo
 
